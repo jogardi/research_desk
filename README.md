@@ -46,7 +46,7 @@ But it is not a traditional search engine. It uses AI at every step:
 - Every document and category has an LLM generated description
 - Video and audio are transcribed and searchable. Clicking a result seeks directly to that moment in the built-in player. 
 - Math rendering for formulas found in PDFs
-- The user can click to jump directly from a search result to the page in the built-in pdf viewer. Thanks to Marker's layout engine, the pdf viewer can higlight the specific block of text with the excerpt.
+- Click to jump directly from a search result to the page in the built-in pdf viewer. Thanks to Marker's layout engine, the pdf viewer can higlight the specific block of text with the excerpt.
 
 Exposing search results to the user seems obvious and yet I have seen no applications with a search experience which is meaningfully different from the usual keyword search. Cursor uses semantic search under the hood and yet it still gives users the same old exact match search from vscode. There is a reason that most user facing search still uses traditional methods: It is because the semantic search results still have terrible aesthetics for human consumption. In order to make search results presentable to humans, the research desk does things differently:
 - **precise chunking**: While most RAG systems use a fairly large chunk size, the research desk chunks at the sentence level so that the search results can show precisely the relevant sentences without irrelevant sentences that happen to be in the same chunk. But chunking at the sentence level means that the usual embedding methods would be missing surrounding context, so the research desk uses Voyage AI's late chunking which is a different paradigm that eliminates the tradeoff between small and large chunks. The embedding model sees the entire document at once so that it has full context but outputs embeddings for each individual chunk.
@@ -56,7 +56,7 @@ Exposing search results to the user seems obvious and yet I have seen no applica
 
 ## Search and Chat, Woven Together
 - **From search results view to agent chat**: Add a search result to the context of the agent (similar to cmd+L in cursor) 
-- **From agent chat to search results view**: Every search query the agent fires is shown to the user and clickable. When the user clicks on of these search queries they are taken to the search results for that query to see the same search results the agent saw. 
+- **From agent chat to search results view**: Every search query the agent fires is displayed and clickable. Click on one of these search queries to see the same search results the agent saw. 
 
 The agent can cite any excerpt, table or figure in its response. Click a citation to jump to that page in the pdf in the pdf viewer. 
 Cited tables and figures are rendered inline in the response, meaning the agent has the ability to display any images from the knowledgebase in it's response.
