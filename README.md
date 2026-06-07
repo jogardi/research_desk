@@ -58,9 +58,9 @@ Exposing search results to the user seems obvious and yet I have seen no applica
 - **From search results view to agent chat**: Add a search result to the context of the agent (similar to cmd+L in cursor) 
 - **From agent chat to search results view**: Every search query the agent fires is shown to the user and clickable. When the user clicks on of these search queries they are taken to the search results for that query to see the same search results the agent saw. 
 
----
-
 The agent can cite any excerpt, table or figure in its response. You can click a citation to jump to that page in the pdf in the pdf viewer. 
 Cited tables and figures render inline in the response, alongside any Mermaid diagrams the agent generates. The agent can respond visually, not just verbally.
+
+---
 
 The code is from late 2024 to mid 2025 but I still think there are a few things that are novel about it and potentially worth sharing. 
