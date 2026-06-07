@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "theme-generator"
+version = "0.1.0"
+description = "Theme generation tools for the Quasar project"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pystache = "^0.6.8"
+pyyaml = "^6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

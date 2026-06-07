@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+This is the path to the project's log file:
+{ROOT_FOLDER}/logs/server_main.log
+
+Look in this file as needed to find error log messages.

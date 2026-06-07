@@ -1,0 +1,31 @@
+default: &default
+  # Folders
+  WORK_FOLDER_LEAF: "work"
+  STAGING_FOLDER_LEAF: "staging"
+  FAILED_FOLDER_LEAF: "failed"
+
+  STAGING_FOLDER: "{ROOT_FOLDER}/{STAGING_FOLDER_LEAF}"
+  WORK_FOLDER: "{ROOT_FOLDER}/{WORK_FOLDER_LEAF}"
+  FAILED_FOLDER: "{ROOT_FOLDER}/{FAILED_FOLDER_LEAF}"
+
+  # File extenstions
+  AUDIO_FILE_EXTENSIONS: ".mp3,.flac,.m4a,.wma,.ogg,.wav,.aac"
+  VIDEO_FILE_EXTENSIONS: ".mpeg,.wmv,.webm,.mov,.mpg,.flv,.mkv,.m4v,.mp4,.avi"
+  TEXT_FILE_EXTENSIONS: ".txt,.xls,.csv,.xml,.htm,.rtf,.json,.html"
+  PDF_FILE_EXTENSIONS: ".pdf"
+  DOCX_FILE_EXTENSIONS: ".docx"
+  IGNORE_FILE_EXTENSIONS: ".log,.DS_Store,.tmp,.lock"
+
+  KB_FTP_ENABLED: "0"
+  TITLING_ENABLED: "0"
+
+default:
+  <<: *default
+
+  LOG_LEVEL: "debug"
+
+  # KNOWLEDGEBASE_FOLDER: "{ROOT_FOLDER}/knowledgebase"
+  # DB_FOLDER: "{ROOT_FOLDER}/database"
+
+  #STAGING_FOLDER: "{ROOT_FOLDER}/{STAGING_FOLDER_LEAF}"
+  #WORK_FOLDER: "{ROOT_FOLDER}/{WORK_FOLDER_LEAF}"

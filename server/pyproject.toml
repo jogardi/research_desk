@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "webservice"
+version = "0.1.0"
+description = ""
+authors = ["Research Desk Contributors"]
+readme = "README.md"
+packages = [{include = "webservice", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+python-dotenv = "^1.0.0"
+flask-uploads = "^0.2.1"
+colorlog = "^6.8.0"
+transformers = "^4.36.2"
+cachetools = "^5.3.3"
+pytest = "^8.1.1"
+torch = { version = ">=2.5.1", markers = "platform_system == 'Darwin'" }
+pypdf = "^4.2.0"
+nltk = "^3.8.1"
+inflect = "^7.2.1"
+gunicorn = "^22.0.0"
+authlib = "^1.3.2"
+flask-limiter = {extras = ["redis"], version = "^3.8.0"}
+diskcache = "^5.6.3"
+google-generativeai = "^0.8.4"
+litellm = "^1.73.1"
+pdfplumber = "^0.11.5"
+pyserini = "^0.44.0"
+flagembedding = "^1.3.4"
+tenacity = "^9.0.0"
+spacy = "^3.8.4"
+bs4 = "^0.0.2"
+
+
+#torch = { version = "^2.6.0+cpu", source = "pytorch" }
+
+#[[tool.poetry.source]]
+#name = "pytorch"
+#url = "https://download.pytorch.org/whl/cpu"
+#priority = "explicit"
+dspy = "^2.6.3"
+fitz = "^0.0.1.dev2"
+pymupdf = "^1.25.3"
+
+numpydoc = "^1.9.0"
+playwright = "^1.53.0"
+requests = "^2.32.4"
+fastapi = "^0.115.14"
+pydantic = "^2.11.7"
+uvicorn = "^0.35.0"
+websockets = "<14.0"
+python-multipart = "^0.0.10"
+weasyprint = "^63.0"
+flashrank = "^0.2.10"
+
+
+
+[tool.poetry.dev-dependencies]
+shared = { path = "../shared", develop = true }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

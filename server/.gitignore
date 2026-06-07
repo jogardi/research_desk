@@ -1,0 +1,10 @@
+*.DS_Store
+**/*.pyc
+__pycache__/
+dist/*
+/.env
+**/explore/*
+disk_cache/*
+static/dist/spa/*
+/config_override.yml
+

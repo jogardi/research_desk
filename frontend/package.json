@@ -1,0 +1,46 @@
+{
+  "name": "research_desk",
+  "version": "0.0.1",
+  "description": "Application allowing user to engage with their own knowledge base with AI technologies",
+  "productName": "Research Desk",
+  "author": "Research Desk Contributors",
+  "private": false,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "sass:dev": "sass --watch --no-source-map src/css:src/css",
+    "sass:build": "sass --no-source-map src/css:dist/spa/css",
+    "dev": "npm run sass:dev & quasar dev",
+    "build": "npm run sass:build & quasar build",
+    "start": "http-server dist/spa -p 9000",
+    "use quasar instead of http-server": "Enter: quasar serve dist/spa"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.4",
+    "@toast-ui/editor": "^3.2.2",
+    "@toast-ui/editor-plugin-color-syntax": "^3.1.0",
+    "@vueuse/core": "^12.0.0",
+    "element-plus": "^2.7.5",
+    "fuzzysort": "^3.1.0",
+    "http-server": "^14.1.1",
+    "katex": "^0.16.22",
+    "marked": "^12.0.2",
+    "pinia": "^2.0.11",
+    "quasar": "^2.6.0",
+    "socket.io-client": "^4.8.1",
+    "uuid4": "^2.0.3",
+    "vue": "^3.0.0",
+    "vue-draggable-plus": "^0.4.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.3.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.14",
+    "sass": "^1.77.6"
+  },
+  "engines": {
+    "node": "^20.2.0",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

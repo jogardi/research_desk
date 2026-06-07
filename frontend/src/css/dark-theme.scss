@@ -1,0 +1,397 @@
+/* 
+ * Dark Theme - Static SCSS Compilation
+ * 
+ * This file contains all dark theme variables and styles.
+ * No runtime switching, no CSS custom properties - just static SCSS.
+ */
+
+// ========================================
+// QUASAR VARIABLE OVERRIDES (Dark Theme)
+// ========================================
+
+// These override Quasar's default variables (which use !default)
+$primary: #b98d34;
+$secondary: #77bee7;
+$negative: #f5adad;
+$info: #77bee7;
+$positive: #728b47;
+$accent: #dfba71;
+$warning: #fca903;
+
+// ========================================
+// CUSTOM THEME VARIABLES (Dark Theme)
+// ========================================
+
+// Layout Background Colors
+$body-text-color: #e0e0e0; // $grey-4
+$body-bg-color: #212121; // $grey-10
+$header-bg: #1d1d1d;
+$sidebar-bg: #2a2a2a; 
+$content-bg: #424242; // $grey-9
+
+// Text Colors
+$text: #e0e0e0;
+$text1: #b0b0b0;
+$text-inverse: #000000;
+$page-title: #728b47;
+
+@import '../../node_modules/quasar/src/css/index.sass';
+@import './_element-plus-overrides.scss';
+
+// ========================================
+// BODY COLOR AND BACKGROUND VARIABLES
+// ========================================
+
+// Override Quasar's default body styling
+body {
+  background-color: $body-bg-color !important;
+  color: $body-text-color !important;
+}
+
+// Body background class (uses CSS variables from base-theme.scss)
+.bg-body-color {
+  background-color: $body-bg-color;
+}
+
+// ========================================
+// LAYOUT BACKGROUND CLASSES
+// ========================================
+.bg-header {
+  background-color: $header-bg;
+}
+
+.bg-sidebar {
+  background-color: $sidebar-bg;
+}
+
+.bg-content-area {
+  background-color: $content-bg;
+}
+
+.bg-selected-categories {
+  background-color: $body-bg-color;
+}
+
+.bg-secondary-nav {
+  background-color: $body-bg-color;
+} 
+
+// Note: Quasar dark mode is handled by .body--dark in base-theme.scss
+
+// ========================================
+// OTHER VARIABLES
+// ========================================
+
+$page-title-color: #728b47;
+
+
+.el-tag .el-tag__close {
+  color: $negative;
+}
+
+// ========================================
+// LAYOUT COMPONENTS
+// ========================================
+
+// Header bootom border
+.q-layout__section--marginal {
+  background-color: $grey-8 !important;
+}
+
+// Main header/toolbar
+#header { 
+  .header-bg {
+    background-color: $header-bg;
+  }
+
+  .header-logo {
+    color: $page-title;
+  }
+
+  .q-tab {
+    color: $primary;
+    min-height: 40px !important;
+  }
+
+  .text-active-tab {
+    color: $accent !important;
+  }
+  .bg-active-tab {
+    background: $sidebar-bg !important;
+  }
+
+  .save-session-btn {
+    color: $info;
+  }
+  .open-notes-btn {
+    color: $positive;
+  }
+  .user-info {
+    color: $primary;
+  }
+}
+
+// Left sidebar drawer
+#left-drawer {
+  background-color: $sidebar-bg;
+  .title {
+    color: $page-title;
+    font-size: 1.1rem;
+  }
+  .session-items {
+    .name {
+    color: $text;
+    }
+    .description {
+      color: $text1;
+    }
+    
+    .q-item.q-router-link--active, .q-item--active {
+      background-color: $header-bg !important;
+      color: $page-title !important;
+    }
+  }
+}
+
+// Right sidebar drawer
+#right-drawer {
+  background-color: $sidebar-bg;
+
+  #token-usage {
+    background-color: $header-bg;
+    .legend span {
+      color: $text1;
+    }
+  }
+  .title {
+    color: $page-title;
+    font-size: 1.1rem;
+  }
+}
+
+// ========================================
+// TEXT & CONTENT STYLING
+// ========================================
+
+.chunk-text {
+  font-size: 1rem !important;
+  line-height: 25px !important;
+  padding-bottom: 0px !important;
+  margin: 0px !important;
+  color: $grey-5;
+}
+
+.chunk-text p {
+  margin-bottom: 5px !important;
+}
+
+.chunk-text b {
+  font-weight: 500 !important;
+  color: $primary !important;
+  opacity: .6;
+}
+
+// ========================================
+// COMPONENT-SPECIFIC STYLES
+// ========================================
+
+.sys-prompts-bg {
+  background-color: $grey-9 !important;
+}
+
+.subtitle {
+  color: $page-title;
+}
+
+.bg-selected-categories-color {
+  background: $body-bg-color;
+}
+.text-selected-categories-color {
+  color: $body-text-color;
+}
+
+// Context builder page
+#context-builder {
+  .q-tab {
+    color: $primary;
+  }
+  .text-active-tab {
+    color: $accent !important;
+  }
+
+  // .tab-panels-bg {
+  //   background-color: $grey-8;
+  //   border-radius: 5px !important;
+  // }
+  .toolbar {
+    background-color: $grey-8;
+    padding: 20px 12px !important;
+  }
+
+  .chunk-title {
+    color: $page-title-color;
+  }
+}
+
+// Chat interface
+#chat {
+  .message-area {
+    background-color: $grey-9;
+    border-radius: 4px;
+  }
+  .person-icon {
+    color: #f0ebbc;
+  }
+  .android-icon {
+    color: #f0bcc1;
+  }
+
+  .person-message {
+    color: #f0ebbc;
+    font-weight: 600;
+    opacity: 0.6;
+  }
+}
+
+.model-description {
+  color: $grey-9;
+  background-color: $grey-3;
+} 
+
+// ========================================
+// QUASAR OVERRIDES
+// ========================================
+
+// Override Quasar classes
+.q-toolbar__title {
+  color: $page-title-color;
+}
+
+.tooltip {
+  background-color: $grey-3;
+  color: $grey-8;
+}
+
+.menu-bg {
+  background-color: $grey-10;
+}
+
+// ========================================
+// UTILITY CLASSES
+// ========================================
+
+.link-color {
+  color: $info;
+}
+
+.search-tool-bar {
+  background-color: $grey-8;
+}
+
+a {
+  color: $blue-grey-3;
+}
+
+.document-info {
+  font-size: 1rem !important;
+  cursor: pointer;
+  color: $blue-grey-4;
+}
+
+.llm-query-area {
+  background-color: $grey-8;
+}
+
+.pdf-viewer .q-toolbar {
+  background-color: $grey-10;
+}
+
+.notes-report {
+  .q-toolbar {  
+    background-color: $grey-10 !important;
+  }
+}
+
+.el-anchor {
+  background-color: transparent !important;
+}
+
+.el-anchor__link {
+  font-weight: 600 !important;
+  font-size: .9rem !important;
+}
+
+.hilite-sentence {
+  color: $blue-2;
+}
+
+.category-color {
+  color: $blue-3;
+  font-weight: 450;
+}
+
+.dialog-body {
+  background-color: $grey-9 !important;
+  padding: 0px !important; 
+  border: 1px solid $grey-9 !important;
+}
+
+// ========================================
+// TABLES & DATA DISPLAY
+// ========================================
+
+.chunk-text table, .message-content table, .explorer table {
+  th, td {
+    border: 1px solid $grey-8 !important;
+  }
+  th {
+    opacity: 0.9;
+  }
+  td {
+    opacity: 0.8;
+  }
+
+  // sort indicator
+  .sortable-header .sort-indicator {
+    color: $grey-5; /* color for better visibility on dark backgrounds */
+  }
+
+  // hover sort indicator
+  .sortable-header:hover {
+    background-color: $grey-8 !important;
+  }
+
+  // active sort indicator
+  .sortable-header.sort-asc .sort-indicator,
+  .sortable-header.sort-desc .sort-indicator {
+    color: #fff; /* color when active for better contrast */
+   }
+}
+
+// ========================================
+// PAGE-SPECIFIC STYLES
+// ========================================
+
+// User guide page
+#user-guide {
+  .fixed-header {
+    background-color: $grey-10 !important;
+    .q-toolbar__title {
+      color: $positive !important;
+    }
+  }
+} 
+
+.toastui-editor-ww-container {
+  background-color: $grey-9 !important;
+}
+
+.toastui-editor-dark .toastui-editor-mode-switch {
+  border-top-color: #4f5155;
+  background-color: $grey-9 !important;
+  padding-top: 3px !important;
+}
+
+.toastui-editor-md-container, .toastui-editor-ww-container {
+  background-color: $grey-9 !important;
+}

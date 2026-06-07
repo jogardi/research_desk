@@ -1,0 +1,147 @@
+/* 
+ * Element Plus Overrides
+ * 
+ * This file contains all Element Plus component overrides.
+ * Imported by both light and dark theme files.
+ */
+
+// ========================================
+// ELEMENT PLUS OVERRIDES
+// ========================================
+
+/* element-plus overrides: */
+:root {
+    --el-color-primary: #{$primary} !important; /* primary color */
+    --el-text-color-regular: #{$text} !important; /* components text color */
+    --el-fill-color-light: #{$sidebar-bg} !important; /* tree hover bg color */
+    --el-fill-color-blank: #{$content-bg} !important; /* components bg color */
+  
+    --el-bg-color-overlay: #{$sidebar-bg} !important;
+    --el-color-info: #{$info} !important;
+  
+    --tree-color: #{$primary}; /* tree color */
+  
+    --el-anchor-bg-color: transparent !important;
+  }
+  
+  // Dark theme specific Element Plus overrides
+  .body--dark {
+    --el-color-primary-light-3: #c99d44;
+    --el-color-primary-light-5: #d9ad54;
+    --el-color-primary-dark-2: #a97d24;
+    --el-checkbox-bg-color: transparent !important;
+  }
+  
+  li.el-select-dropdown__item.is-selected {
+    font-weight: 500 !important;
+  }
+  
+  .el-segmented__item-selected { 
+    background: $primary !important;
+  }
+  
+  .el-checkbox__inner {
+    background-color: transparent !important;
+  }
+  
+  .el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: $primary !important;
+  }
+  
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: $primary !important;
+  }
+  
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner:before {
+    background-color: #fff !important; /* checkbox minus sign */
+  }
+  
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner:before {
+    background-color: transparent;
+  }
+  
+  /* el-tree overrides */
+  .el-tree {
+    border-left: 1px solid var(--tree-color);
+  }
+  
+  .el-tree-node {
+    --el-border: 2px solid var(--tree-color); /* checkbox border */
+    --el-tree-node-hover-bg-color: #{$sidebar-bg}; /* hover bg color */
+    position: relative;
+    padding-left: 16px;
+  }
+  
+  .el-tree-node__children {
+    padding-left: 16px;
+  }
+  
+  .el-tree-node :last-child:before {
+    height: 38px;
+  }
+  
+  .el-tree-node:before {
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: auto;
+    border-width: 1px;
+    border-left: 1px solid var(--tree-color);
+    bottom: 0px;
+    height: 100%;
+    top: 0px;
+    width: 1px;
+  }
+  
+  .el-tree-node:after {
+    content: "";
+    left: -4px;
+    position: absolute;
+    right: auto;
+    border-width: 1px;
+    border-top: 1px solid var(--tree-color);
+    height: 20px;
+    top: 12px;
+    width: 20px;
+  }
+  
+  .el-tree-node__expand-icon {
+    color: var(--tree-color);
+    font-size: 16px;
+  }
+  
+  .el-tree-node__expand-icon.is-leaf {
+    font-size: 1px !important;
+  }
+  
+  // el-select style overrides
+  .el-tag.el-tag--info {
+    background-color: $grey-4;
+    color: $text;
+  }
+  .el-tag .el-tag__close {
+    color: $negative;
+  }
+  .el-select-dropdown__item.is-hovering {
+    background-color: #{$sidebar-bg};
+  }
+  .el-select-dropdown__item.is-selected {
+    color: $info;
+    font-weight: 700;
+  }
+  
+  // Light theme specific Element Plus overrides
+  body:not(.body--dark) {
+    .el-tag.el-tag--info {
+      background-color: $grey-4;
+      color: $text;
+    }
+  }
+  
+  // Dark theme specific Element Plus overrides
+  .body--dark {
+    .el-tag.el-tag--info {
+      background-color: $grey-10;
+      color: $grey-3;
+    }
+  } 

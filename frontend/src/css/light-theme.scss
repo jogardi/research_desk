@@ -1,0 +1,422 @@
+/* 
+ * Light Theme - Static SCSS Compilation
+ * 
+ * This file contains all light theme variables and styles.
+ * No runtime switching, no CSS custom properties - just static SCSS.
+ */
+
+// ========================================
+// QUASAR VARIABLE OVERRIDES (Light Theme)
+// ========================================
+
+// These override Quasar's default variables (which use !default)
+$primary: #3f51b5;
+$secondary: #77bee7;
+$negative: #d76060;
+$info: #0083ce;
+$positive: #3f51b5;
+$accent: #dfba71;
+$warning: #fca903;
+
+// ========================================
+// CUSTOM THEME VARIABLES (Light Theme)
+// ========================================
+
+// Layout Background Colors
+$body-text-color: #000000; 
+$body-bg-color: #e0e0e0; // $grey-4
+$header-bg: #e9e9e9; // $grey-6
+$sidebar-bg: #e9e9e9; // $grey-6
+$content-bg: #eeeeee; // $grey-3
+
+// Text Colors
+$text: #000000;
+$text1: #b0b0b0;
+$text-inverse: #000000;
+$page-title: #728b47;
+
+@import '../../node_modules/quasar/src/css/index.sass';
+@import './_element-plus-overrides.scss';
+
+// ========================================
+// BODY COLOR AND BACKGROUND VARIABLES
+// ========================================
+// Override Quasar's default body styling
+body {
+  background-color: $body-bg-color !important;
+  color: $body-text-color !important;
+}
+
+// Body background class (uses CSS variables from base-theme.scss)
+.bg-body-color {
+  background-color: $body-bg-color;
+}
+
+// ========================================
+// LAYOUT BACKGROUND CLASSES
+// ========================================
+.bg-header {
+  background-color: $header-bg;
+}
+
+.bg-sidebar {
+  background-color: $sidebar-bg;
+}
+
+.bg-content-area {
+  background-color: $content-bg;
+}
+
+.bg-selected-categories {
+  background-color: $body-bg-color;
+}
+
+.bg-secondary-nav {
+  background-color: $body-bg-color;
+}
+
+// Note: Light mode CSS variables are handled by :root in base-theme.scss
+
+// ========================================
+// OTHER VARIABLES
+// ========================================
+
+$page-title-color: $blue-10;
+
+
+
+
+// ========================================
+// LAYOUT COMPONENTS
+// ========================================
+
+// Main header/toolbar
+#header { 
+  .header-bg {
+    background-color: $grey-4;
+    font-weight: 400;
+  }
+
+  .header-logo {
+    color: $indigo-12;
+  }
+
+  // .q-toolbar {
+  //   min-height: 40px !important;
+  // }
+
+  .q-tab {
+    color: $grey-8;
+    min-height: 40px !important;
+  }
+
+  // .q-toolbar__content {
+  //   padding-top: 0px !important;
+  //   padding-bottom: 0px !important;
+  // }
+
+  .text-active-tab {
+    color: $primary !important;
+  }
+  .bg-active-tab {
+    background: $content-bg !important;
+  }
+
+  .save-session-btn {
+    color: $text1;
+  }
+  .open-notes-btn {
+    color: $text1;
+  }
+  .user-info {
+    color: $primary;
+  }
+}
+
+// Left sidebar drawer
+#left-drawer {
+  background-color: $sidebar-bg;
+  .title {
+    color: $primary;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .session-items {
+    .name {
+    color: $text;
+    }
+    .description {
+      color: $text1;
+    }
+    
+    .q-item.q-router-link--active, .q-item--active {
+      background-color: $grey-2 !important;
+      color: $text !important;
+    }
+  }
+}
+
+// Right sidebar drawer
+#right-drawer {
+  background-color: $sidebar-bg;
+
+  #token-usage {
+    background-color: $header-bg;
+    .legend span {
+      color: $text1;
+    }
+  }
+  .title {
+    color: $text;
+    font-size: 1.1rem;
+  }
+}
+
+// ========================================
+// TEXT & CONTENT STYLING
+// ========================================
+
+.chunk-text {
+  font-size: 1rem !important;
+  line-height: 25px !important;
+  padding-bottom: 0px !important;
+  margin: 0px !important;
+}
+
+.chunk-text p {
+  margin-bottom: 5px !important;
+}
+
+.chunk-text b {
+  font-weight: 500 !important;
+  /* background-color: #fefed7; */
+  /* color: #76459e !important;  */
+  color: #b98d34 !important;
+  font-size: 1.05rem !important;
+  // opacity: .9;
+}
+
+// ========================================
+// COMPONENT-SPECIFIC STYLES
+// ========================================
+
+.sys-prompts-bg {
+  background-color: $grey-2 !important;
+}
+
+.subtitle {
+  color: #000;
+  font-weight: 425;
+}
+
+.bg-selected-categories-color {
+  background: $body-bg-color;
+}
+.text-selected-categories-color {
+  color: $body-text-color;
+}
+
+// Context builder page
+#context-builder {
+  .q-tab {
+    color: $grey-8;
+  }
+  .text-active-tab {
+    color: $primary !important;
+  }
+  // .bg-active-tab {
+  //   background: $grey-8 !important;
+  // }
+
+  // .tab-panels-bg {
+  //   background-color: $grey-9;
+  //   border-radius: 5px !important;
+  // }
+  .toolbar {
+    background-color: $grey-4;
+    padding: 20px 12px !important;
+  }
+
+  .chunk-title {
+    color: $grey-10;
+    font-weight: 600;
+  }
+
+}
+
+// Chat interface
+#chat {
+  .message-area {
+    background-color: $grey-3;
+    border-radius: 4px;
+  }
+  .person-icon {
+    color: #069126;
+  }
+  .android-icon {
+    color: #e729d6;
+  }
+
+  .person-message {
+    color: #000;
+    font-weight: 600;
+    // opacity: 0.6;
+  }
+
+  .message-content {
+    color: #000;
+    opacity: 1.0 !important;
+  }
+}
+
+
+
+// #chat {
+  .model-description {
+    color: $grey-3;
+    background-color: $grey-10;
+  } 
+// }
+
+// ========================================
+// QUASAR OVERRIDES
+// ========================================
+
+// Override Quasar classes
+.q-toolbar__title {
+  color: #000;
+}
+
+.tooltip {
+  background-color: $grey-10;
+  color: $grey-3;
+}
+
+.menu-bg {
+  background-color: $grey-4;
+}
+
+
+
+
+
+.q-btn-group .text-primary {
+  color: $grey-5 !important
+}
+
+// ========================================
+// UTILITY CLASSES
+// ========================================
+
+.link-color {
+  color: $blue-10;
+}
+
+.search-tool-bar {
+  background-color: $grey-4;
+}
+
+a {
+  color: $blue-10;
+}
+
+.document-info {
+  font-size: 1rem !important;
+  cursor: pointer;
+  color: $blue-10;
+}
+
+.llm-query-area {
+  background-color: $grey-3;
+}
+
+.pdf-viewer .q-toolbar {
+  background-color: $grey-5;
+}
+
+.notes-report {
+  .q-toolbar {  
+    background-color: $grey-4 !important;
+  }
+}
+
+.el-anchor {
+  background-color: transparent !important;
+}
+
+.el-anchor__link {
+  font-weight: 600 !important;
+  font-size: .9rem !important;
+}
+
+.hilite-sentence {
+  color: $blue-10;
+  font-weight: 450;
+}
+
+.category-color {
+  color: $blue-10;
+  font-weight: 450;
+}
+
+.dialog-body {
+  background-color: $grey-2 !important;
+  padding: 0px !important; 
+  border: 1px solid $grey-3 !important;
+}
+
+// ========================================
+// TABLES & DATA DISPLAY
+// ========================================
+
+.chunk-text table, .message-content table, .explorer table {
+  th, td {
+    border: 1px solid $grey-5 !important;
+  }
+  th {
+    // background-color: $grey-3 !important;
+    opacity: 0.9;
+  }
+  td {
+    opacity: 0.8;
+  }
+
+  // sort indicator
+  .sortable-header .sort-indicator {
+    color: $grey-6 /* color for better visibility on dark backgrounds */
+  }
+
+  // hover sort indicator
+  .sortable-header:hover {
+    background-color: $grey-4 !important;
+  }
+
+  // active sort indicator
+  .sortable-header.sort-asc .sort-indicator,
+  .sortable-header.sort-desc .sort-indicator {
+    color: $grey-10; /* color when active for better contrast */
+   }
+}
+
+// ========================================
+// PAGE-SPECIFIC STYLES
+// ========================================
+
+// User guide page
+#user-guide {
+  .fixed-header {
+    background-color: $grey-3 !important;
+    .q-toolbar__title {
+      color: $grey-8 !important;
+    }
+  }
+} 
+
+.q-card {
+  background-color: $grey-2 !important;
+}
+
+.toastui-editor-ww-container {
+  background-color: $grey-1 !important;
+}
+

@@ -1,0 +1,69 @@
+/* app global scss */
+
+// Element Plus scrollbar
+.el-scrollbar {
+  padding-bottom: 4rem !important;
+}
+
+// Typography for context builder
+#context-builder {
+  h1, h2, h3, h4, h5 {
+    font-size: 1.2rem !important;
+    line-height: 1.48rem !important;
+    margin: 8px 0 !important;
+  }
+}
+
+// Table styles
+.chunk-text table,
+.message-content table,
+.explorer table {
+  margin: {
+    top: 1rem !important;
+    bottom: 1rem !important;
+  }
+  border-collapse: collapse;
+  
+  td {
+    text-align: left;
+    padding: {
+      left: 10px !important;
+      top: 10px !important;
+      bottom: 10px !important;
+    }
+  }
+  
+  th {
+    text-align: left;
+    padding: {
+      left: 10px !important;
+      top: 5px !important;
+      bottom: 5px !important;
+    }
+  }
+}
+
+// Table sorting styles
+.sortable-header {
+  cursor: pointer !important;
+  user-select: none !important;
+  position: relative !important;
+  transition: background-color 0.2s ease;
+  padding-right: 25px !important;
+  
+  .sort-indicator {
+    font-size: 1.3rem;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+  }
+}
+
+// Transparent background utility
+.chunk-text table,
+.message-content table,
+.explorer table {
+  .transparent-bg {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+  }
+} 
